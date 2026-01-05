@@ -5,7 +5,7 @@ import { ThemeToggle } from "./components/ThemeToggle/ThemeToggle";
 function App() {
   return (
     <>
-      <ThemeToggle />
+      <ThemeToggle size="lg" />
       <div className="container-fluid">
         <section id="hero-about">
           <div className="row mt-5 mb-5">

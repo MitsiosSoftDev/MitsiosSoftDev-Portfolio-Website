@@ -1,5 +1,6 @@
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 import "./_aboutWindow.scss";
+import { GoDownload } from "react-icons/go";
 
 export const AboutWidnow: React.FC = ({}) => {
   return (
@@ -39,9 +40,17 @@ export const AboutWidnow: React.FC = ({}) => {
           </button>
         </div>
         <div className="d-flex justify-content-end w-100">
-          <button type="button" className="btn btn-outline-secondary m-3">
-            <a href="#" className="link-underline link-underline-opacity-0">
+          <button
+            type="button"
+            className="btn m-3 ps-3 border border-3 border-rounded download-btn"
+          >
+            <a
+              href="/Resume/Erotokritou-Dimitris-CV.pdf"
+              className="link-underline link-underline-opacity-0"
+              download=""
+            >
               Download CV
+              <GoDownload size={25} className="ms-2 pb-1" />
             </a>
           </button>
         </div>
