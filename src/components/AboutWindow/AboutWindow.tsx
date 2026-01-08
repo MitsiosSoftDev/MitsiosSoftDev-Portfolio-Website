@@ -2,9 +2,9 @@ import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 import "./_aboutWindow.scss";
 import { GoDownload } from "react-icons/go";
 
-export const AboutWidnow: React.FC = ({}) => {
+export const AboutWindow: React.FC = ({}) => {
   return (
-    <div className="w-100 h-100 rounded-4 border">
+    <div className="w-100 h-100 rounded-4 border shadow p-3 mb-5 bg-body-tertiary rounded">
       <div className="d-flex justify-content-around m-3 window-icons-width">
         <RiCheckboxBlankCircleFill color="red" size={"15px"} />
         <RiCheckboxBlankCircleFill color="yellow" size={"15px"} />
@@ -19,8 +19,8 @@ export const AboutWidnow: React.FC = ({}) => {
           corrupti.
         </div>
       </section>
-      <hr />
-      <div className="d-flex">
+      <hr className="m-0" />
+      <div className="container-fluid d-flex">
         <div className="d-flex">
           <button type="button" className="btn mt-3 mb-3 ms-3">
             <a

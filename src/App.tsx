@@ -1,5 +1,5 @@
 import "./App.css";
-import { AboutWidnow } from "./components/AboutWindow/AboutWindow";
+import { AboutWindow } from "./components/AboutWindow/AboutWindow";
 import { ThemeToggle } from "./components/ThemeToggle/ThemeToggle";
 
 function App() {
@@ -10,11 +10,20 @@ function App() {
         <section id="hero-about">
           <div className="row mt-5 mb-5">
             <div className="col-6 d-flex flex-column justify-content-center ps-5">
-              <h1 className="text-start">Dimitris Erotokritou</h1>
-              <h2 className="text-start">Software Developer</h2>
+              <p className="text-start fs-1 mb-0">Dimitris Erotokritou</p>
+              <div className="text-changer">
+                <div className="roles-wrapper">
+                  <div className="roles">
+                    <span>Full-Stack</span>
+                    <span>Front-End</span>
+                    <span>Back-End</span>
+                  </div>
+                </div>
+                <p className="text-start fs-1">Software Developer</p>
+              </div>
             </div>
             <div className="col-6">
-              <AboutWidnow />
+              <AboutWindow />
             </div>
           </div>
         </section>
