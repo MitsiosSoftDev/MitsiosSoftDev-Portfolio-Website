@@ -4,7 +4,7 @@ import { GoDownload } from "react-icons/go";
 
 export const AboutWindow: React.FC = ({}) => {
   return (
-    <div className="w-100 h-100 rounded-4 border shadow p-3 mb-5 bg-body-tertiary rounded">
+    <div className="w-100 rounded-4 border shadow pt-2 mb-5 bg-body-tertiary rounded">
       <div className="d-flex justify-content-around m-3 window-icons-width">
         <RiCheckboxBlankCircleFill color="red" size={"15px"} />
         <RiCheckboxBlankCircleFill color="yellow" size={"15px"} />
@@ -42,11 +42,11 @@ export const AboutWindow: React.FC = ({}) => {
         <div className="d-flex justify-content-end w-100">
           <button
             type="button"
-            className="btn m-3 ps-3 border border-3 border-rounded download-btn"
+            className="btn m-3 ps-3 border border-2 border-rounded download-btn"
           >
             <a
               href="/Resume/Erotokritou-Dimitris-CV.pdf"
-              className="link-underline link-underline-opacity-0"
+              className="d-flex align-items-center link-underline link-underline-opacity-0"
               download=""
             >
               Download CV
