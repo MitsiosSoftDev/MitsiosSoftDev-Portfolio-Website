@@ -3,13 +3,7 @@ import { useTheme } from "next-themes";
 import { BsSun, BsMoon, BsLaptop } from "react-icons/bs";
 import { Dropdown } from "react-bootstrap";
 import "../../styles/_themeToggle.scss";
-
-interface ThemeToggleProps {
-  className?: string;
-  size?: "sm" | "lg";
-}
-
-type ThemeMode = "light" | "dark" | "system";
+import type { ThemeMode, ThemeToggleProps } from "../../types/types";
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({
   className = "",
@@ -30,7 +24,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({
       <Dropdown.Toggle
         variant="link"
         size={size}
-        aria-label="Theme menu"
+        aria-label="Theme Menu"
         className="theme-toggle-btn"
       >
         <ButtonIcon color={iconColor} className="m-1" />

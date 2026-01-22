@@ -1,5 +1,5 @@
 import type { ProjectCardProps } from "../../types/types";
-import "./_projectCard.scss";
+import "../../styles/_projectCard.scss";
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   projectTitle,

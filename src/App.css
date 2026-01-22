@@ -1,85 +1,9 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5rem;
   text-align: center;
-  height: 100vh;
-}
-
-.text-changer {
-  font-size: 2.5rem;
-}
-
-.roles-wrapper {
-  height: 1.2em;
-  overflow: hidden;
-  position: relative;
-}
-
-.roles {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  animation: rotateRoles 9s infinite;
-}
-
-.roles span {
-  height: 1.2em;
-  line-height: 1.2em;
-  font-weight: 600;
-  background: linear-gradient(90deg, #ce84fc, #22d3ee, #c084fc);
-  background-size: 200% 100%;
-
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: gradientMove 6s ease infinite;
-}
-
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes rotateRoles {
-  0% {
-    transform: translateY(0);
-  }
-  20% {
-    transform: translateY(0);
-  }
-
-  33% {
-    transform: translateY(-1.2em);
-  }
-  53% {
-    transform: translateY(-1.2em);
-  }
-
-  66% {
-    transform: translateY(-2.4em);
-  }
-  86% {
-    transform: translateY(-2.4em);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .roles {
-    animation: none;
-  }
+  height: 100%;
 }
 
 /*

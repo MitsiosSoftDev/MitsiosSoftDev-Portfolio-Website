@@ -1,11 +1,11 @@
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
-import "./_aboutWindow.scss";
 import { GoDownload } from "react-icons/go";
+import "../../styles/_aboutWindow.scss";
 
 export const AboutWindow: React.FC = ({}) => {
   return (
     <div className="w-100 rounded-4 border shadow pt-2 mb-5 bg-body-tertiary rounded">
-      <div className="d-flex justify-content-around m-3 window-icons-width">
+      <div className="d-flex justify-content-around m-3 window__icons">
         <RiCheckboxBlankCircleFill color="red" size={"15px"} />
         <RiCheckboxBlankCircleFill color="yellow" size={"15px"} />
         <RiCheckboxBlankCircleFill color="green" size={"15px"} />
@@ -25,7 +25,7 @@ export const AboutWindow: React.FC = ({}) => {
           <button type="button" className="btn mt-3 mb-3 ms-3">
             <a
               href="#stack"
-              className="link-underline link-underline-opacity-0"
+              className="window__btn-link link-underline link-underline-opacity-0"
             >
               Stack
             </a>
@@ -33,7 +33,7 @@ export const AboutWindow: React.FC = ({}) => {
           <button type="button" className="btn m-3">
             <a
               href="#projects"
-              className="link-underline link-underline-opacity-0"
+              className="window__btn-link link-underline link-underline-opacity-0"
             >
               Projects
             </a>
@@ -42,11 +42,11 @@ export const AboutWindow: React.FC = ({}) => {
         <div className="d-flex justify-content-end w-100">
           <button
             type="button"
-            className="btn m-3 ps-3 border border-2 border-rounded download-btn"
+            className="btn m-3 ps-3 border border-2 border-rounded window__download-btn"
           >
             <a
               href="/Resume/Erotokritou-Dimitris-CV.pdf"
-              className="d-flex align-items-center link-underline link-underline-opacity-0"
+              className="d-flex align-items-center link-underline link-underline-opacity-0 window__btn-link"
               download=""
             >
               Download CV

@@ -1,6 +1,7 @@
 import { AboutWindow } from "../AboutWindow/AboutWindow";
 import { ProjectCard } from "../ProjectCard/ProjectCard";
-
+import "../../styles/_mainPage.scss";
+import { TechStack } from "../TechStack/TechStack";
 export const MainPage: React.FC = () => {
   return (
     <div className="container-fluid h-100">
@@ -50,9 +51,12 @@ export const MainPage: React.FC = () => {
       <section id="tech-stack">
         <div className="row mt-5">
           <div className="col w-100">
-            <h1 id="stack" className="text-center">
+            <h1 id="stack" className="text-center m-5">
               Stack
             </h1>
+            <div className="pt-5 pb-5">
+              <TechStack />
+            </div>
           </div>
         </div>
       </section>

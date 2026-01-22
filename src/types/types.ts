@@ -4,3 +4,10 @@ export interface ProjectCardProps {
   projectImageUrl?: string;
   projectLink?: string;
 }
+
+export interface ThemeToggleProps {
+  className?: string;
+  size?: "sm" | "lg";
+}
+
+export type ThemeMode = "light" | "dark" | "system";
