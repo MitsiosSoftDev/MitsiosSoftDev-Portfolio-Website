@@ -1,39 +1,50 @@
 .tech-stack-wrapper {
   width: 100%;
   overflow: hidden;
-  padding: 10px 0;
+}
+
+.tech-stack-wrapper:hover .tech-stack-track {
+  animation-play-state: paused;
 }
 
 .tech-stack-track {
   display: flex;
-  gap: 40px;
-  width: fit-content;
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
   animation: scroll 40s linear infinite;
+}
 
-  &:hover {
-    animation-play-state: paused;
-  }
+.tech-stack-set {
+  display: flex;
+  align-items: center;
 }
 
 .tech-stack-item {
-  // flex-shrink: 0;
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition:
-    transform 0.3s ease,
-    color 0.3s ease;
+  padding: 0 30px;
+  transition: transform 0.3s ease;
+  transform-origin: center;
 
   &:hover {
     transform: scale(1.2);
+    z-index: 2;
   }
 }
 
+.tech-stack-icon {
+  width: 50px;
+  height: 50px;
+}
+
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
+  from {
+    transform: translate3d(0, 0, 0);
   }
-  100% {
-    transform: translateX(-50%);
+  to {
+    transform: translate3d(-50%, 0, 0);
   }
 }

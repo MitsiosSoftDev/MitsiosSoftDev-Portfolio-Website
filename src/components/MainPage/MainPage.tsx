@@ -7,7 +7,7 @@ export const MainPage: React.FC = () => {
   return (
     <div className="container-fluid h-100">
       <section id="hero-about">
-        <div className="d-flex justify-content-end gap-4 mt-5">
+        <div className="d-flex justify-content-end gap-4 ps-5">
           <a
             href="https://www.google.com"
             target="_blank"
