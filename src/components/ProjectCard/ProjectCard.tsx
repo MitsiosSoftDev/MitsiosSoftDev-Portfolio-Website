@@ -14,12 +14,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <h5 className="card-title">{projectTitle}</h5>
         <hr />
         <p className="card-text">{projectDescription}</p>
-        <a
-          className="link-underline link-underline-opacity-0 item-center"
-          href={projectLink}
+        <button
+          type="button"
+          className="btn m-3 ps-3 border border-2 border-rounded button__download-btn"
         >
-          Check it out
-        </a>
+          <a
+            className="d-flex align-items-center link-underline link-underline-opacity-0 button__btn-link"
+            href={projectLink}
+          >
+            Check it out
+          </a>
+        </button>
       </div>
     </div>
   );
