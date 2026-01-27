@@ -1,7 +1,6 @@
 .tech-stack-wrapper {
 	width: 100%;
 	overflow: hidden;
-	padding: 10px 0;
 }
 
 .tech-stack-wrapper:hover .tech-stack-track {
@@ -13,13 +12,12 @@
 	width: max-content;
 	will-change: transform;
 	transform: translate3d(0, 0, 0);
-	animation: scroll 35s linear infinite;
+	animation: scroll 40s linear infinite;
 }
 
 .tech-stack-set {
 	display: flex;
 	align-items: center;
-	gap: 10px;
 }
 
 .tech-stack-item {
@@ -27,15 +25,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0 20px;
+	padding: 0 30px;
 	transition: transform 0.3s ease;
 	transform-origin: center;
-
-	svg {
-		display: block;
-		max-width: 45px;
-		max-height: 45px;
-	}
 
 	&:hover {
 		transform: scale(1.2);
@@ -44,8 +36,8 @@
 }
 
 .tech-stack-icon {
-	width: 45px;
-	height: 45px;
+	width: 50px;
+	height: 50px;
 }
 
 @keyframes scroll {

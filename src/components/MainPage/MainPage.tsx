@@ -55,7 +55,7 @@ export const MainPage: React.FC = () => {
 						<h1 id="stack" className="text-center m-5">
 							Stack
 						</h1>
-						<div className="pt-5 pb-5">
+						<div className="pt-5">
 							<TechStack />
 						</div>
 					</div>

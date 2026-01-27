@@ -1,8 +1,5 @@
 .theme-toggle-btn {
-  // &:hover {
-  //   transform: translateY(1px);
-  // }
-  &::after {
-    display: none !important;
-  }
+	&::after {
+		display: none !important;
+	}
 }

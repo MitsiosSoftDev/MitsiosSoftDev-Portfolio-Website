@@ -8,7 +8,7 @@ export const TechStack: React.FC = () => {
 			<div className="tech-stack-track">
 				<div className="tech-stack-set">
 					{TECH_STACK_ICONS.map(({ key, icon: Icon }) => (
-						<div key={`a-${key}`} className="tech-stack-item" title={key}>
+						<div key={`first-${key}`} className="tech-stack-item" title={key}>
 							<Icon className="tech-stack-icon" />
 						</div>
 					))}
@@ -16,7 +16,7 @@ export const TechStack: React.FC = () => {
 
 				<div className="tech-stack-set" aria-hidden="true">
 					{TECH_STACK_ICONS.map(({ key, icon: Icon }) => (
-						<div key={`b-${key}`} className="tech-stack-item" title={key}>
+						<div key={`second-${key}`} className="tech-stack-item" title={key}>
 							<Icon className="tech-stack-icon" />
 						</div>
 					))}
