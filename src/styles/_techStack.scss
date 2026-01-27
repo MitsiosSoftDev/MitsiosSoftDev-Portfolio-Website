@@ -29,10 +29,10 @@
   transition: transform 0.3s ease;
   transform-origin: center;
 
-  &:hover {
-    transform: scale(1.2);
-    z-index: 2;
-  }
+  // &:hover {
+  //   transform: scale(1.2);
+  //   z-index: 2;
+  // }
 }
 
 .tech-stack-icon {

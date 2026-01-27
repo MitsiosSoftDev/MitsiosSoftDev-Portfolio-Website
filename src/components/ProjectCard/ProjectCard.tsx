@@ -13,7 +13,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="card-body ps-0 pe-0 project-card">
         <h5 className="card-title">{projectTitle}</h5>
         <hr />
-        <p className="card-text">{projectDescription}</p>
+        <p className="card-text m-4 text-start">{projectDescription}</p>
         <button
           type="button"
           className="btn m-3 ps-3 border border-2 border-rounded button__download-btn"
