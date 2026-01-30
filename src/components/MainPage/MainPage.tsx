@@ -8,7 +8,7 @@ export const MainPage: React.FC = () => {
 	return (
 		<div className="container-fluid h-100">
 			<section id="hero-about">
-				<div className="d-flex justify-content-end gap-4 ps-5">
+				<div className="d-flex justify-content-end gap-4 ps-5 pb-3">
 					<a
 						href="https://github.com/MitsiosSoftDev"
 						target="_blank"
@@ -97,17 +97,15 @@ export const MainPage: React.FC = () => {
 			</section>
 			<section id="footer" className="mt-5">
 				<footer>
-					<footer className="text-center">
-						<span>
-							&copy; {new Date().getFullYear()}
-							<a
-								href="https://www.linkedin.com/in/dimitris-erotokritou/"
-								target="_blank"
-								className="window__btn-link link-underline link-underline-opacity-0"
-							>
-								Dimitris Erotokritou
-							</a>
-						</span>
+					<footer className="text-center ">
+						<span>&copy; {new Date().getFullYear()}</span>
+						<a
+							href="https://www.linkedin.com/in/dimitris-erotokritou/"
+							target="_blank"
+							className="ms-1 window__btn-link link-underline link-underline-opacity-0"
+						>
+							Dimitris Erotokritou
+						</a>
 					</footer>
 				</footer>
 			</section>
