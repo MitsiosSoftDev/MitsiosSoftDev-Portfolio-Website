@@ -55,7 +55,7 @@ export const AboutWindow: React.FC = ({}) => {
 					>
 						<a
 							className="d-flex align-items-center link-underline link-underline-opacity-0 window__btn-link"
-							href="/Resume/Erotokritou-Dimitris-CV.pdf"
+							href={`${import.meta.env.BASE_URL}Resume/Erotokritou-Dimitris-CV.pdf`}
 							download=""
 						>
 							Download CV
