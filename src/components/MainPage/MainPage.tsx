@@ -54,20 +54,20 @@ export const MainPage: React.FC = () => {
 							<div className="col-sm-6">
 								<ProjectCard
 									projectTitle="Tool for Detection and Mitigation of IoT Threats"
-									projectDescription="This tool was developed by me as the Thesis Project for my BSc Degree in Computer Science. The project was implemented in Python using JetBrains PyCharm Professional. It is based on a Server - Client Architecture, with communication between the two programs achieved through sockets. This was my Thesis project for "
+									projectDescription="This tool was developed by me as the Thesis Project for my BSc Degree in Computer Science. The project was implemented in Python using JetBrains PyCharm Professional. It is based on a Server - Client Architecture, with communication between the two programs achieved through sockets. This was my Thesis project."
 									projectLink="https://github.com/MitsiosSoftDev/Tool_Development_for_Detection_and_Mitigation_of_IoT_Threats"
 								/>
 							</div>
 							<div className="col-sm-6">
 								<ProjectCard
 									projectTitle="Pokédex"
-									projectDescription="This was developed in JavaScript, following a youtube tutorial for building the Pokédex. It calls and API to fetch and display the data of each Pokémon. It was a good practise in the earliest days of my career and helped me train and understand in more depth the consepts and flow of JavaScript programming language"
+									projectDescription="This was developed in JavaScript, following a youtube tutorial for building the Pokédex. It calls and API to fetch and display the data of each Pokémon. It was a good practise in the earliest days of my career and helped me train and understand in more depth the consepts and flow of JavaScript programming language."
 									projectLink="https://github.com/MitsiosSoftDev/Pokedex"
 								/>
 							</div>
 							<div className="col-sm-6">
 								<ProjectCard
-									projectTitle="Personal Website Portfolio"
+									projectTitle="Portfolio Website"
 									projectDescription="This website is part of one of my side projects, where I wanted to build a personal website portfolio to show my work throughout my experience with React, Typescript and Bootstrap. This is a simple landing page that was created and deployed by myself."
 									projectLink="https://github.com/MitsiosSoftDev/MitsiosSoftDev-Portfolio-Website"
 								/>
@@ -75,7 +75,7 @@ export const MainPage: React.FC = () => {
 							<div className="col-sm-6">
 								<ProjectCard
 									projectTitle="Snake Game"
-									projectDescription="This was developed in JavaScript, following a youtube tutorial for building the Snake Game. It was a good practise in the earliest days of my career and helped me train and understand in depth the consepts and flow of JavaScript programming language"
+									projectDescription="This was developed in JavaScript, following a youtube tutorial for building the Snake Game. It was a good practise in the earliest days of my career and helped me train and understand in depth the consepts and flow of JavaScript programming language."
 									projectLink="https://github.com/MitsiosSoftDev/Snake-Game-Javascript"
 								/>
 							</div>

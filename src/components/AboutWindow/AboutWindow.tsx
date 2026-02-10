@@ -14,8 +14,8 @@ export const AboutWindow: React.FC = ({}) => {
 			<section id="about-section">
 				<div className="text-start m-4">
 					<p>
-						A Full Stack Developer passionate about building complete web
-						solutions from front to back.
+						Full Stack Software Developer passionate about building complete web
+						solutions from frontend to backend.
 					</p>
 					<p>
 						I specialize in crafting modern, responsive frontends with React and
