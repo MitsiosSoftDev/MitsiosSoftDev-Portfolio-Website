@@ -3,11 +3,20 @@ import { ProjectCard } from "../ProjectCard/ProjectCard";
 import "../../styles/_mainPage.scss";
 import { TechStack } from "../TechStack/TechStack";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 export const MainPage: React.FC = () => {
 	return (
 		<div className="container-fluid h-100">
-			<section id="hero-about">
+			<motion.section
+				id="hero-about"
+				initial={{ opacity: 0, y: 50 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true, amount: 0.5 }}
+				transition={{ duration: 0.5, ease: "easeOut" }}
+				// className="container-fluid h-100"
+				className="relative isolate container mx-auto w-full py-5 md:py-8 lg:py-5"
+			>
 				<div className="d-flex justify-content-end gap-4 ps-5 pb-3">
 					<a
 						href="https://github.com/MitsiosSoftDev"
@@ -43,7 +52,7 @@ export const MainPage: React.FC = () => {
 						<AboutWindow />
 					</div>
 				</div>
-			</section>
+			</motion.section>
 			<section id="projects">
 				<div className="row mt-5">
 					<div className="col w-100">
