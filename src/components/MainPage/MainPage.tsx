@@ -14,8 +14,7 @@ export const MainPage: React.FC = () => {
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true, amount: 0.5 }}
 				transition={{ duration: 0.5, ease: "easeOut" }}
-				// className="container-fluid h-100"
-				className="relative isolate container mx-auto w-full py-5 md:py-8 lg:py-5"
+				className="relative isolate container mx-auto w-full py-5 md:py-8 lg:py-3"
 			>
 				<div className="d-flex justify-content-end gap-4 ps-5 pb-3">
 					<a
@@ -53,7 +52,14 @@ export const MainPage: React.FC = () => {
 					</div>
 				</div>
 			</motion.section>
-			<section id="projects">
+			<motion.section
+				id="projects"
+				initial={{ opacity: 0, y: 50 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true, amount: 0.2 }}
+				transition={{ duration: 0.5, ease: "easeOut" }}
+				className="relative isolate container mx-auto w-full py-5 md:py-8 lg:py-3"
+			>
 				<div className="row mt-5">
 					<div className="col w-100">
 						<h1 id="projects" className="text-center m-5">
@@ -91,8 +97,16 @@ export const MainPage: React.FC = () => {
 						</div>
 					</div>
 				</div>
-			</section>
-			<section id="tech-stack">
+			</motion.section>
+			<motion.section
+				id="tech-stack"
+				initial={{ opacity: 0, y: 50 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true, amount: 0.5 }}
+				transition={{ duration: 0.5, ease: "circIn" }}
+				// className="container-fluid h-100"
+				className="relative isolate container mx-auto w-full py-5 md:py-8 lg:py-3"
+			>
 				<div className="row mt-5">
 					<div className="col w-100">
 						<h1 id="stack" className="text-center m-5">
@@ -103,10 +117,10 @@ export const MainPage: React.FC = () => {
 						</div>
 					</div>
 				</div>
-			</section>
-			<section id="footer" className="mt-5">
+			</motion.section>
+			<section id="footer">
 				<footer>
-					<footer className="text-center ">
+					<footer className="text-center mt-5 mb-0">
 						<span>&copy; {new Date().getFullYear()}</span>
 						<a
 							href="https://www.linkedin.com/in/dimitris-erotokritou/"
