@@ -104,7 +104,6 @@ export const MainPage: React.FC = () => {
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true, amount: 0.5 }}
 				transition={{ duration: 0.5, ease: "circIn" }}
-				// className="container-fluid h-100"
 				className="relative isolate container mx-auto w-full py-5 md:py-8 lg:py-3"
 			>
 				<div className="row mt-5">
