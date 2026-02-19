@@ -13,7 +13,6 @@ export const TechStack: React.FC = () => {
             </div>
           ))}
         </div>
-
         <div className="tech-stack-set" aria-hidden="true">
           {TECH_STACK_ICONS.map(({ key, icon: Icon }) => (
             <div key={`second-${key}`} className="tech-stack-item" title={key}>
