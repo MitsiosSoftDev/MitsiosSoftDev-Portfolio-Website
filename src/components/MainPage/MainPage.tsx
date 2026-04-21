@@ -4,6 +4,7 @@ import "../../styles/_mainPage.scss";
 import { TechStack } from "../TechStack/TechStack";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { MdEmail } from "react-icons/md";
 
 export const MainPage: React.FC = () => {
 	return (
@@ -30,6 +31,13 @@ export const MainPage: React.FC = () => {
 						className="window__btn-link link-underline link-underline-opacity-0"
 					>
 						<BsLinkedin size={30} />
+					</a>
+					<a
+						href=""
+						target="_blank"
+						className="window__btn-link link-underline link-underline-opacity-0"
+					>
+						<MdEmail size={30} />
 					</a>
 				</div>
 				<div className="row mt-5 mb-5">
