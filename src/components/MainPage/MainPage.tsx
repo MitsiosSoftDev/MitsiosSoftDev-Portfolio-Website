@@ -32,13 +32,6 @@ export const MainPage: React.FC = () => {
 					>
 						<BsLinkedin size={30} />
 					</a>
-					<a
-						href=""
-						target="_blank"
-						className="window__btn-link link-underline link-underline-opacity-0"
-					>
-						<MdEmail size={30} />
-					</a>
 				</div>
 				<div className="row mt-5 mb-5">
 					<div className="col-6 d-flex flex-column justify-content-center ps-5">
