@@ -22,10 +22,9 @@ This portfolio highlights my development experience, projects, education, and th
 - TypeScript
 - Vite
 - Bootstrap
-- Sass
+- Scss
 - Framer Motion
 - React Icons
-- next-themes
 
 ## Features
 
