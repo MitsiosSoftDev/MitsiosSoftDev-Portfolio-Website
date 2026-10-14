@@ -6,7 +6,7 @@ The portfolio was built to provide a simple and modern way to learn more about m
 
 ## Live Website
 
-**[View My Portfolio](https://mitsiossoftdev.github.io/MitsiosSoftDev-Portfolio-Website/)**
+🌐 [derotokritou.dev](https://derotokritou.dev/)
 
 ## About
 
