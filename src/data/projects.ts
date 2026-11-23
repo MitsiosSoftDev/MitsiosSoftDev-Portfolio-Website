@@ -1,32 +1,47 @@
+import type { TechnologyKey } from "../constants";
+
+type Project = {
+  id: string;
+  title: string;
+  description: string;
+  githubUrl: string;
+  technologies: readonly TechnologyKey[];
+};
+
+export const featuredProject = {
+  id: "iot-project",
+  title: "IoT threat detection and mitigation",
+  description:
+    "For my computer science thesis, I built a Python tool to detect and mitigate threats in IoT systems. The client and server communicate over sockets.",
+  githubUrl:
+    "https://github.com/MitsiosSoftDev/Tool_Development_for_Detection_and_Mitigation_of_IoT_Threats",
+  technologies: ["python", "tcp", "sklearn", "crypto", "numpy"],
+} satisfies Project;
+
 export const projects = [
-	{
-		id: "portfolio",
-		title: "Portfolio Website",
-		description:
-			"This website is part of one of my side projects, where I wanted to build a personal website portfolio to show my work throughout my experience with React, Typescript and Bootstrap. This is a simple landing page that was created and deployed by myself.",
-		githubUrl:
-			"https://github.com/MitsiosSoftDev/MitsiosSoftDev-Portfolio-Website",
-	},
-	{
-		id: "iot-project",
-		title: "Tool for Detection and Mitigation of IoT Threats",
-		description:
-			"This tool was developed by me as the Thesis Project for my BSc Degree in Computer Science. The project was implemented in Python using JetBrains PyCharm Professional. It is based on a Server - Client Architecture, with communication between the two programs achieved through sockets. This was my Thesis project.",
-		githubUrl:
-			"https://github.com/MitsiosSoftDev/Tool_Development_for_Detection_and_Mitigation_of_IoT_Threats",
-	},
-	{
-		id: "pokedex-project",
-		title: "Pokédex",
-		description:
-			"This was developed in JavaScript, following a youtube tutorial for building the Pokédex. It calls and API to fetch and display the data of each Pokémon. It was a good practise in the earliest days of my career and helped me train and understand in more depth the consepts and flow of JavaScript programming language.",
-		githubUrl: "https://github.com/MitsiosSoftDev/Pokedex",
-	},
-	{
-		id: "snake-project",
-		title: "Snake Game",
-		description:
-			"This was developed in JavaScript, following a youtube tutorial for building the Snake Game. It was a good practise in the earliest days of my career and helped me train and understand in depth the consepts and flow of JavaScript programming language.",
-		githubUrl: "https://github.com/MitsiosSoftDev/Snake-Game-Javascript",
-	},
-];
+  {
+    id: "portfolio",
+    title: "Portfolio website",
+    description:
+      "My personal site, built with React, TypeScript and Bootstrap.",
+    githubUrl:
+      "https://github.com/MitsiosSoftDev/MitsiosSoftDev-Portfolio-Website",
+    technologies: ["ts", "react", "bootstrap", "scss", "vite"],
+  },
+  {
+    id: "pokedex-project",
+    title: "Pokédex",
+    description:
+      "A JavaScript project that fetches and displays Pokémon data from an API.",
+    githubUrl: "https://github.com/MitsiosSoftDev/Pokedex",
+    technologies: ["js", "html", "css", "pokeapi"],
+  },
+  {
+    id: "snake-project",
+    title: "Snake Game",
+    description:
+      "An early JavaScript project implementing the classic Snake game.",
+    githubUrl: "https://github.com/MitsiosSoftDev/Snake-Game-Javascript",
+    technologies: ["js", "html", "css"],
+  },
+] satisfies Project[];

@@ -1,3 +1,5 @@
+import { BsCodeSlash } from "react-icons/bs";
+import { TECHNOLOGIES } from "../../constants";
 import type { ProjectCardProps } from "../../types/types";
 import "../../styles/_projectCard.scss";
 
@@ -6,27 +8,44 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 	projectDescription,
 	projectImageUrl,
 	projectLink,
-}) => {
-	return (
-		<div className="card project-card w-100 rounded-4 border shadow pt-2 mb-5 bg-body-tertiary rounded">
-			<img src={projectImageUrl} />
-			<div className="card-body ps-0 pe-0 project-card">
-				<h5 className="card-title m-4">{projectTitle}</h5>
-				<hr />
-				<p className="card-text m-4 text-start">{projectDescription}</p>
-				<button
-					type="button"
-					className="btn m-3 ps-3 border border-1 border-rounded button__download-btn"
+	technologies,
+	feature,
+}) => (
+	<article className={feature ? "featured" : "project-card"}>
+		<div className={feature ? "featured-copy" : "project-copy"}>
+			{projectImageUrl && <img className="project-image" src={projectImageUrl} alt="" />}
+			<span className="project-mark" aria-hidden="true">
+				<BsCodeSlash size={18} />
+			</span>
+			{feature && <p className="kicker">{feature.label}</p>}
+			<h3>{projectTitle}</h3>
+			<p className="description">{projectDescription}</p>
+			{!!technologies?.length && (
+				<ul className="project-stack" role="list" aria-label="Technologies">
+					{technologies.map((key) => {
+						const { label, icon: Icon } = TECHNOLOGIES[key];
+
+						return (
+							<li key={key} title={label}>
+								<Icon size={18} role="img" aria-label={label} />
+							</li>
+						);
+					})}
+				</ul>
+			)}
+			{projectLink && (
+				<a
+					className="text-link"
+					href={projectLink}
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label={`${projectTitle} on GitHub`}
 				>
-					<a
-						className="d-flex align-items-center link-underline link-underline-opacity-0 button__btn-link"
-						href={projectLink}
-						target="_blank"
-					>
-						Check GitHub
-					</a>
-				</button>
-			</div>
+					View repository{" "}
+					<span aria-hidden="true">↗</span>
+				</a>
+			)}
 		</div>
-	);
-};
+		{feature?.visual}
+	</article>
+);

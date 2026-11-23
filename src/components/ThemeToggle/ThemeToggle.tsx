@@ -1,50 +1,50 @@
-import React from "react";
 import { useTheme } from "next-themes";
-import { BsSun, BsMoon, BsLaptop } from "react-icons/bs";
 import { Dropdown } from "react-bootstrap";
-import "../../styles/_themeToggle.scss";
+import { BsLaptop, BsMoon, BsSun } from "react-icons/bs";
 import type { ThemeMode, ThemeToggleProps } from "../../types/types";
+import "../../styles/_themeToggle.scss";
+
+const themeOptions = [
+	{ mode: "light", label: "Light", icon: BsSun },
+	{ mode: "dark", label: "Dark", icon: BsMoon },
+	{ mode: "system", label: "System", icon: BsLaptop },
+] as const satisfies ReadonlyArray<{ mode: ThemeMode; label: string; icon: typeof BsSun }>;
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({
 	className = "",
 	size,
 }) => {
-	const { theme, resolvedTheme, setTheme } = useTheme();
-	const current = (theme as ThemeMode | undefined) ?? "system";
-	const resolved = (resolvedTheme as "light" | "dark" | undefined) ?? "light";
-	const iconColor = resolved === "dark" ? "#fff" : "#000";
-	const ButtonIcon =
-		current === "system" ? BsLaptop : resolved === "dark" ? BsMoon : BsSun;
+	const { theme, setTheme } = useTheme();
+	const ButtonIcon = themeOptions.find(({ mode }) => mode === theme)?.icon ?? BsLaptop;
 
 	return (
-		<Dropdown
-			className={`${className} d-flex justify-content-center pb-5`}
-			align="start"
-		>
+		<Dropdown className={`theme-menu ${className}`} align="end">
 			<Dropdown.Toggle
-				variant="link"
+				id="portfolio-theme-menu"
+				variant="light"
 				size={size}
-				aria-label="Theme Menu"
 				className="theme-toggle-btn"
 			>
-				<ButtonIcon color={iconColor} className="m-1" />
+				<ButtonIcon size={17} aria-hidden="true" />
+				Theme
 			</Dropdown.Toggle>
-			<Dropdown.Menu>
-				<Dropdown.Item onClick={() => setTheme("light")}>
-					<span className="d-inline-flex align-items-center gap-2">
-						<BsSun /> Light
-					</span>
-				</Dropdown.Item>
-				<Dropdown.Item onClick={() => setTheme("dark")}>
-					<span className="d-inline-flex align-items-center gap-2">
-						<BsMoon /> Dark
-					</span>
-				</Dropdown.Item>
-				<Dropdown.Item onClick={() => setTheme("system")}>
-					<span className="d-inline-flex align-items-center gap-2">
-						<BsLaptop /> System
-					</span>
-				</Dropdown.Item>
+
+			<Dropdown.Menu className="theme-options">
+				{themeOptions.map(({ mode, label, icon: Icon }) => (
+					<Dropdown.Item
+						key={mode}
+						as="button"
+						type="button"
+						active={(theme ?? "system") === mode}
+						aria-pressed={(theme ?? "system") === mode}
+						onClick={() => setTheme(mode)}
+					>
+						<span className="d-inline-flex align-items-center gap-2">
+							<Icon aria-hidden="true" />
+							{label}
+						</span>
+					</Dropdown.Item>
+				))}
 			</Dropdown.Menu>
 		</Dropdown>
 	);

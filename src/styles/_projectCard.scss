@@ -1,32 +1,206 @@
-.card {
-  transition: transform 1s ease;
-  &:hover {
-    transform: translateY(-8px);
-  }
+.portfolio .featured {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	overflow: hidden;
+	background: var(--sheet);
+	border: 1px solid var(--line);
+	border-radius: 13px;
 }
 
-.button {
-  &__download-btn {
-    transition: background-color 0.2s ease;
+.portfolio .featured-copy {
+	padding: clamp(19px, 3.2vw, 43px);
+	align-self: center;
+}
 
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.05);
-    }
-  }
+.portfolio .featured h3 {
+	font-size: clamp(25px, 3.4vw, 46px);
+	line-height: 1.1;
+	margin-top: 7px;
+	letter-spacing: -.035em;
+}
 
-  [data-bs-theme="light"] &__download-btn:hover {
-    background-color: rgba(0, 0, 0, 0.06);
-  }
+.portfolio .description {
+	margin-block: 10px 15px;
+	color: var(--muted);
+	font-size: 15px;
+}
 
-  [data-bs-theme="dark"] &__download-btn:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-  }
+.portfolio .diagram {
+	display: grid;
+	place-content: center;
+	gap: 17px;
+	min-height: 194px;
+	padding: 20px 14px;
+	color: var(--on-blue);
+	background-color: var(--blue);
+	font-family: var(--mono);
+}
 
-  &__btn-link {
-    color: inherit;
+.portfolio .diagram figcaption {
+	text-align: center;
+	font-size: 12px;
+}
 
-    &:hover {
-      color: inherit;
-    }
-  }
+.portfolio .diagram-chain {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	gap: 6px;
+}
+
+.portfolio .diagram-node {
+	border: 1px solid #90b4f0;
+	border-radius: 6px;
+	min-width: 0;
+	padding: 11px 7px;
+	background: var(--diagram-node-bg);
+	color: var(--diagram-ink);
+	text-align: center;
+	font-size: clamp(11px, 1.5vw, 14px);
+}
+
+.portfolio .diagram-connection {
+	display: grid;
+	justify-items: center;
+	gap: 4px;
+	font-size: 11px;
+}
+
+.portfolio .diagram-route {
+	position: relative;
+	width: clamp(45px, 7vw, 86px);
+	min-height: 27px;
+	text-align: center;
+	font-size: 23px;
+	line-height: .9;
+}
+
+.portfolio .diagram-route::before {
+	content: "";
+	position: absolute;
+	inset: auto 0 2px;
+	height: 1px;
+	background: currentColor;
+}
+
+.portfolio .diagram-route::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: currentColor;
+	box-shadow: 0 0 5px currentColor;
+	opacity: 0;
+}
+
+.portfolio .project-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 13px;
+	margin-top: 14px;
+}
+
+.portfolio .project-card {
+	display: flex;
+	min-width: 0;
+	background: var(--sheet);
+	border: 1px solid var(--line);
+	border-radius: 10px;
+	padding: 15px;
+}
+
+.portfolio .project-copy {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 6px;
+	min-width: 0;
+}
+
+.portfolio .project-card .description {
+	margin: 0;
+	font-size: 14px;
+}
+
+.portfolio .project-image {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.portfolio .project-stack {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	list-style: none;
+	padding: 0;
+	margin: 4px 0 7px;
+}
+
+.portfolio .project-stack li {
+	display: grid;
+	place-items: center;
+	width: 33px;
+	height: 33px;
+	border: 1px solid var(--line);
+	border-radius: 6px;
+	background: var(--quiet);
+	color: var(--blue);
+}
+
+.portfolio .featured .project-stack {
+	margin-block: 0 14px;
+}
+
+.portfolio .project-card .project-stack {
+	margin-top: auto;
+	padding-top: 5px;
+}
+
+.portfolio .project-mark {
+	display: grid;
+	place-items: center;
+	width: 41px;
+	height: 34px;
+	border-radius: 6px;
+	margin-bottom: 3px;
+	background: var(--wash);
+	color: var(--blue);
+}
+
+@media (max-width: 760px) {
+	.portfolio .project-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 680px) {
+	.portfolio .featured {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 500px) {
+	.portfolio .project-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.portfolio[data-motion="playing"] .diagram-route::after {
+		opacity: 1;
+		animation: de-signal 1.55s ease-in-out infinite alternate;
+	}
+	@keyframes de-signal {
+		from {
+			left: 0;
+		}
+		to {
+			left: calc(100% - 5px);
+		}
+	}
 }

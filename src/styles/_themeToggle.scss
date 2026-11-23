@@ -1,5 +1,62 @@
-.theme-toggle-btn {
-	&::after {
-		display: none !important;
+.portfolio .theme-menu {
+	position: relative;
+}
+
+.portfolio :is(.theme-toggle-btn, .motion-toggle) {
+	--bs-btn-color: var(--ink);
+	--bs-btn-bg: var(--sheet);
+	--bs-btn-border-color: var(--line);
+	--bs-btn-hover-color: var(--ink);
+	--bs-btn-hover-bg: var(--quiet);
+	--bs-btn-hover-border-color: var(--blue);
+	--bs-btn-active-color: var(--ink);
+	--bs-btn-active-bg: var(--quiet);
+	--bs-btn-active-border-color: var(--blue);
+
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	border-radius: 8px;
+	padding: 6px 10px;
+	font: 500 0.75rem/1.4 var(--mono);
+
+	&:focus-visible {
+		outline: 2px solid var(--blue);
+		outline-offset: 4px;
+	}
+}
+
+.portfolio .theme-toggle-btn::after {
+	display: none;
+}
+
+.portfolio .theme-options {
+	--bs-dropdown-bg: var(--sheet);
+	--bs-dropdown-border-color: var(--line);
+	--bs-dropdown-link-color: var(--ink);
+	--bs-dropdown-link-hover-color: var(--ink);
+	--bs-dropdown-link-hover-bg: var(--quiet);
+	--bs-dropdown-link-active-color: var(--ink);
+	--bs-dropdown-link-active-bg: var(--wash);
+
+	margin-top: 8px;
+	min-width: 138px;
+	padding: 5px;
+	border-radius: 9px;
+	box-shadow: 0 8px 26px #0003;
+
+	.dropdown-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		padding: 7px 9px;
+		border-radius: 5px;
+		font-size: 0.8125rem;
+	}
+
+	.dropdown-item.active::after {
+		content: "✓";
+		color: var(--blue);
 	}
 }

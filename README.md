@@ -1,47 +1,50 @@
 # Dimitris Erotokritou - Portfolio
 
-My personal portfolio website showcasing my background, experience, technical skills, and software development projects.
+My single-page portfolio as a full-stack software developer. I build web applications with React and TypeScript on the frontend and C#, ASP.NET Core, and SQL Server on the backend.
 
-The portfolio was built to provide a simple and modern way to learn more about me, explore some of my work, and get in touch.
+[Visit the portfolio at derotokritou.dev](https://derotokritou.dev/)
 
-## Live Website
+## What’s on the site
 
-🌐 [derotokritou.dev](https://derotokritou.dev/)
+- Selected projects with technology icons and repository links. The featured IoT threat detection thesis includes an animated client-server diagram.
+- My background, professional experience, a CV link, and contact links for GitHub, LinkedIn, and email.
+- A scrolling Skills carousel with the technologies and tools I use.
+- A responsive layout with smooth section navigation and light, dark, and system themes.
+- A looping typewriter and code animation. The header control pauses the hero and diagram animations, and the site respects the system’s reduced-motion preference.
 
-## About
+## Built with
 
-I'm Dimitris Erotokritou, a Full Stack Software Developer with experience building modern web applications across both frontend and backend technologies.
+- React, TypeScript, and Vite
+- Bootstrap, React Bootstrap, and SCSS
+- next-themes, Framer Motion, and React Icons
 
-My main development stack includes React and TypeScript on the frontend, alongside C#, ASP.NET and SQL Server on the backend.
+## Run locally
 
-This portfolio highlights my development experience, projects, education, and the technologies I work with.
-
-## Built With
-
-- React
-- TypeScript
-- Vite
-- Bootstrap
-- Scss
-- Framer Motion
-- React Icons
-
-## Features
-
-- Responsive design for desktop and mobile devices
-- Light and dark themes
-- Smooth navigation between portfolio sections
-- Animated UI elements and transitions
-- Projects showcase
-- Skills and technology overview
-- Professional and educational background
-- Contact and social links
-- SEO metadata and custom favicon
-
-## Running Locally
-
-Clone the repository:
+Use Node.js 22.12 or newer and npm.
 
 ```bash
 git clone https://github.com/MitsiosSoftDev/MitsiosSoftDev-Portfolio-Website.git
+cd MitsiosSoftDev-Portfolio-Website
+npm ci
+npm run dev
 ```
+
+Open the local URL printed by Vite.
+
+| Command           | Description                                        |
+| ----------------- | -------------------------------------------------- |
+| `npm run lint`    | Run ESLint.                                        |
+| `npm run build`   | Type-check the project and build it into `dist/`.  |
+| `npm run preview` | Serve the production build locally after building. |
+
+## Project layout
+
+- `src/components/` contains the page layout and reusable components.
+- `src/data/projects.ts` defines the featured project and the project cards.
+- `src/constants.ts` defines the technology icons used by the cards and Skills carousel.
+- `src/styles/` contains the theme and component styles.
+- `public/` contains the CV, favicons, sitemap, and custom-domain configuration.
+
+## Deployment
+
+The portfolio is configured for GitHub Pages. With push access to the repository, run `npm run deploy` to build the site and publish `dist/` to the `gh-pages` branch. The custom domain is defined in `public/CNAME`.
