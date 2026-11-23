@@ -46,28 +46,36 @@
 	}
 
 	.portfolio .tech-stack-track {
-		--tech-stack-set-width: calc(var(--tech-stack-count) * var(--tech-stack-slot));
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
 
-		display: flex;
-		width: calc(2 * var(--tech-stack-set-width));
-		animation: de-stack-scroll 40s linear infinite;
+		width: calc(var(--tech-stack-count) * var(--tech-stack-slot));
 	}
 	.portfolio .tech-stack-set,
 	.portfolio .tech-stack-set[aria-hidden="true"] {
+		grid-area: 1 / 1;
 		display: flex;
-		flex: 0 0 var(--tech-stack-set-width);
 		flex-wrap: nowrap;
 		justify-content: flex-start;
+		animation: de-stack-scroll 80s linear -40s infinite;
+	}
+	.portfolio .tech-stack-set[aria-hidden="true"] {
+		transform: translateX(100%);
+		animation-delay: 0s;
 	}
 	@keyframes de-stack-scroll {
+		// Each set resets outside the viewport while the other keeps moving.
+		from {
+			transform: translateX(100%);
+		}
 		to {
-			transform: translateX(-50%);
+			transform: translateX(-100%);
 		}
 	}
 }
 
 @media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
-	.portfolio .tech-stack-wrapper:hover .tech-stack-track {
+	.portfolio .tech-stack-wrapper:hover .tech-stack-set {
 		animation-play-state: paused;
 	}
 }
