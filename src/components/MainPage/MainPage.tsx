@@ -221,9 +221,7 @@ export const MainPage: React.FC = () => {
           aria-labelledby="stack"
         >
           <h2 id="stack">Skills</h2>
-          <motion.div {...reveal}>
-            <TechStack />
-          </motion.div>
+          <TechStack />
         </section>
       </main>
 

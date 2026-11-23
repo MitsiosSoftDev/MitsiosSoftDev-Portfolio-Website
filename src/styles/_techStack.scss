@@ -1,4 +1,7 @@
 .portfolio .tech-stack-wrapper {
+	--tech-stack-slot: clamp(58px, 8vw, 110px);
+	--tech-stack-icon-size: clamp(29px, 4.7vw, 50px);
+
 	overflow: hidden;
 	padding-block: 8px 13px;
 }
@@ -18,9 +21,11 @@
 }
 
 .portfolio .tech-stack-item {
-	display: grid;
-	place-items: center;
-	flex: 0 0 clamp(58px, 8vw, 110px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+	inline-size: var(--tech-stack-slot);
 	min-height: 58px;
 	color: var(--muted);
 }
@@ -30,32 +35,39 @@
 }
 
 .portfolio .tech-stack-icon {
-	width: clamp(29px, 4.7vw, 50px);
-	height: clamp(29px, 4.7vw, 50px);
+	display: block;
+	inline-size: var(--tech-stack-icon-size);
+	block-size: var(--tech-stack-icon-size);
 }
 
 @media (prefers-reduced-motion: no-preference) {
 	.portfolio .tech-stack-wrapper {
 		mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
 	}
+
 	.portfolio .tech-stack-track {
+		--tech-stack-set-width: calc(var(--tech-stack-count) * var(--tech-stack-slot));
+
 		display: flex;
-		width: max-content;
+		width: calc(2 * var(--tech-stack-set-width));
 		animation: de-stack-scroll 40s linear infinite;
 	}
 	.portfolio .tech-stack-set,
 	.portfolio .tech-stack-set[aria-hidden="true"] {
 		display: flex;
-		flex: none;
-		width: max-content;
+		flex: 0 0 var(--tech-stack-set-width);
 		flex-wrap: nowrap;
-	}
-	.portfolio .tech-stack-wrapper:hover .tech-stack-track {
-		animation-play-state: paused;
+		justify-content: flex-start;
 	}
 	@keyframes de-stack-scroll {
 		to {
-			transform: translate3d(-50%, 0, 0);
+			transform: translateX(-50%);
 		}
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+	.portfolio .tech-stack-wrapper:hover .tech-stack-track {
+		animation-play-state: paused;
 	}
 }
